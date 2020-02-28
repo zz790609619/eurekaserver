@@ -1,0 +1,13 @@
+#设置tomcat服务端口号
+server:
+  port : 8761
+spring:
+  application:
+    name: eurekazz
+eureka:
+  client:
+    fetch-registry: false #自己就是注册中心，负责维护服务，不需要去检索服务
+    register-with-eureka: false #不向注册中心注册自己
+  server:
+    enable-self-preservation: false
+
