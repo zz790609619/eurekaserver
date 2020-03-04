@@ -1,13 +1,16 @@
-#ÉèÖÃtomcat·şÎñ¶Ë¿ÚºÅ
+#è®¾ç½®tomcatæœåŠ¡ç«¯å£å·
 server:
   port : 8761
 spring:
   application:
     name: eurekazz
+
 eureka:
   client:
-    fetch-registry: false #×Ô¼º¾ÍÊÇ×¢²áÖĞĞÄ£¬¸ºÔğÎ¬»¤·şÎñ£¬²»ĞèÒªÈ¥¼ìË÷·şÎñ
-    register-with-eureka: false #²»Ïò×¢²áÖĞĞÄ×¢²á×Ô¼º
-  server:
-    enable-self-preservation: false
-
+    fetch-registry: true #åŒæ­¥æ³¨å†Œä¸­å¿ƒçš„ä¿¡æ¯
+    register-with-eureka: true #æ³¨å†Œä¸­å¿ƒæ³¨å†Œè‡ªå·±
+    service-url:
+      defaultZone: http://peer2:8762/eureka #æ³¨å†Œåˆ°æ³¨å†Œä¸­å¿ƒ
+  instance:
+    hostname: peer1
+    instance-id: peer1
